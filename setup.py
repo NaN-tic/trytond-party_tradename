@@ -27,20 +27,20 @@ for dep in info.get('depends', []):
 requires.append('trytond >= %s.%s, < %s.%s' %
         (major_version, minor_version, major_version, minor_version + 1))
 
-setup(name='trytond_party_tradename',
+setup(name='trytonzz_party_tradename',
     version=info.get('version', '0.0.1'),
     description='Tryton module add trade name in party',
     author='Zikzakmedia SL',
     author_email='zikzak@zikzakmedia.com',
     url='http://www.zikzakmedia.com',
-    download_url="https://bitbucket.org/zikzakmedia/trytond-party_tradename",
-    package_dir={'trytond.modules.party_tradename': '.'},
+    download_url="https://bitbucket.org/zikzakmedia/trytonzz-party_tradename",
+    package_dir={'trytonzz.modules.party_tradename': '.'},
     packages=[
-        'trytond.modules.party_tradename',
-        'trytond.modules.party_tradename.tests',
+        'trytonzz.modules.party_tradename',
+        'trytonzz.modules.party_tradename.tests',
         ],
     package_data={
-        'trytond.modules.party_tradename': info.get('xml', []) \
+        'trytonzz.modules.party_tradename': info.get('xml', []) \
             + ['tryton.cfg', 'locale/*.po'],
         },
     classifiers=[
@@ -63,9 +63,9 @@ setup(name='trytond_party_tradename',
     install_requires=requires,
     zip_safe=False,
     entry_points="""
-    [trytond.modules]
-    party_tradename = trytond.modules.party_tradename
+    [trytonzz.modules]
+    party_tradename = trytonzz.modules.party_tradename
     """,
     test_suite='tests',
-    test_loader='trytond.test_loader:Loader',
+    test_loader='trytonzz.test_loader:Loader',
 )
