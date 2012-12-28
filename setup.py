@@ -27,13 +27,13 @@ for dep in info.get('depends', []):
 requires.append('trytond >= %s.%s, < %s.%s' %
         (major_version, minor_version, major_version, minor_version + 1))
 
-setup(name='trytonzz_party_tradename',
+setup(name='trytonspain_party_tradename',
     version=info.get('version', '0.0.1'),
     description='Tryton module add trade name in party',
     author='Zikzakmedia SL',
     author_email='zikzak@zikzakmedia.com',
     url='http://www.zikzakmedia.com',
-    download_url="https://bitbucket.org/zikzakmedia/trytond-party_tradename",
+    download_url="https://bitbucket.org/trytonspain/trytond-party_tradename",
     package_dir={'trytond.modules.party_tradename': '.'},
     packages=[
         'trytond.modules.party_tradename',
