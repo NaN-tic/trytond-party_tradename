@@ -8,8 +8,8 @@ la pestaña **Contabilidad**.
 Si instala el módulo `Búsqueda de terceros <../party_search/index.html>`_,
 también buscará terceros por el campo **Nombre comercial**.
 
-Módulos que dependen
-====================
+Módulos de los que depende
+==========================
 
 Instalados
 ----------
