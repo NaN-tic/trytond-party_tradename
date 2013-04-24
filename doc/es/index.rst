@@ -5,19 +5,7 @@ Nombre comercial empresas
 Este módulo añade un campo **nombre comercial** a terceros o empresas dentro de
 la pestaña **Contabilidad**.
 
-Si instala el módulo `Búsqueda de terceros <../party_search/index.html>`_,
-también buscará terceros por el campo **Nombre comercial**.
-
-Módulos de los que depende
-==========================
-
-Instalados
-----------
-
-.. toctree::
-   :maxdepth: 1
-
-   /party/index
+Si instala el módulo party_search, también buscará terceros por el campo Nombre comercial.
 
 Dependencias
 ------------
