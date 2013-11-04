@@ -7,7 +7,7 @@ from trytond.pool import PoolMeta
 __all__ = ['Party']
 __metaclass__ = PoolMeta
 
+
 class Party:
-    'Party'
     __name__ = 'party.party'
     tradename = fields.Char('Trade Name')
