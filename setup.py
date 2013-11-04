@@ -40,7 +40,7 @@ setup(name='trytonspain_party_tradename',
         ],
     package_data={
         'trytond.modules.party_tradename': info.get('xml', []) \
-            + ['tryton.cfg', 'locale/*.po'],
+            + ['tryton.cfg', 'view/*.xml', 'locale/*.po'],
         },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
