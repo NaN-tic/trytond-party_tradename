@@ -5,7 +5,7 @@ copyright notices and license types. -->
 <data>
     <xpath expr="/form/group[@id=&quot;checkboxes&quot;]"
         position="after">
-        <label name="tradename"/>
-        <field name="tradename"/>
+        <label name="trade_name"/>
+        <field name="trade_name"/>
     </xpath>
 </data>

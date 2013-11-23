@@ -4,8 +4,8 @@ The COPYRIGHT file at the top level of this repository contains the full
 copyright notices and license types. -->
 <data>
     <xpath
-        expr="/tree/field[@name=&quot;name&quot;]"
+        expr="/tree/field[@name='name']"
         position="after">
-        <field name="tradename"/>
+        <field name="trade_name"/>
     </xpath>
 </data>
