@@ -20,3 +20,8 @@ class Party:
         TableHandler = backend.get('TableHandler')
         table = TableHandler(cursor, cls, module_name)
         table.column_rename('tradename', 'trade_name')
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        res = super(Party, cls).search_rec_name(name, clause)
+        return ['OR', [res], [('trade_name',) + tuple(clause[1:])]]
