@@ -3,7 +3,6 @@
 #the full copyright notices and license terms.
 from trytond.model import fields
 from trytond.pool import PoolMeta
-from trytond.transaction import Transaction
 from trytond import backend
 from trytond.pyson import Eval
 
@@ -23,10 +22,9 @@ class Party:
 
     @classmethod
     def __register__(cls, module_name):
-        cursor = Transaction().cursor
         TableHandler = backend.get('TableHandler')
         super(Party, cls).__register__(module_name)
-        table = TableHandler(cursor, cls, module_name)
+        table = TableHandler(cls, module_name)
         table.column_rename('tradename', 'trade_name')
 
     @classmethod
