@@ -7,7 +7,6 @@ from trytond import backend
 from trytond.pyson import Eval
 
 __all__ = ['Party']
-__metaclass__ = PoolMeta
 
 STATES = {
     'readonly': ~Eval('active', True),
@@ -16,6 +15,7 @@ DEPENDS = ['active']
 
 
 class Party:
+    __metaclass__ = PoolMeta
     __name__ = 'party.party'
     trade_name = fields.Char('Trade Name', select=True, states=STATES,
         depends=DEPENDS)
