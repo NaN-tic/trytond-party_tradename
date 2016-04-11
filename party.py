@@ -31,5 +31,12 @@ class Party:
 
     @classmethod
     def search_rec_name(cls, name, clause):
-        res = super(Party, cls).search_rec_name(name, clause)
-        return ['OR', [res], [('trade_name',) + tuple(clause[1:])]]
+        domain = super(Party, cls).search_rec_name(name, clause)
+        if clause[1].startswith('!') or clause[1].startswith('not '):
+            bool_op = 'AND'
+        else:
+            bool_op = 'OR'
+        return [bool_op,
+            domain,
+            ('trade_name',) + tuple(clause[1:]),
+            ]
