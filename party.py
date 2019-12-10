@@ -21,9 +21,8 @@ class Party(metaclass=PoolMeta):
 
     @classmethod
     def __register__(cls, module_name):
-        TableHandler = backend.get('TableHandler')
         super(Party, cls).__register__(module_name)
-        table = TableHandler(cls, module_name)
+        table = backend.TableHandler(cls, module_name)
         table.column_rename('tradename', 'trade_name')
 
     @classmethod
