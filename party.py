@@ -16,7 +16,7 @@ DEPENDS = ['active']
 
 class Party(metaclass=PoolMeta):
     __name__ = 'party.party'
-    trade_name = fields.Char('Trade Name', select=True, states=STATES,
+    trade_name = fields.Char('Trade Name', states=STATES,
         depends=DEPENDS)
 
     @classmethod
