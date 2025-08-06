@@ -3,8 +3,7 @@
 The COPYRIGHT file at the top level of this repository contains the full
 copyright notices and license types. -->
 <data>
-    <xpath expr="/form/group[@id='header']/group[@id='checkboxes']"
-        position="after">
+    <xpath expr="//field[@name='lang']" position="before">
         <label name="trade_name"/>
         <field name="trade_name"/>
     </xpath>
