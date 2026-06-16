@@ -3,7 +3,6 @@
 # license terms.
 from trytond.model import fields
 from trytond.pool import PoolMeta
-from trytond import backend
 
 
 class Party(metaclass=PoolMeta):
@@ -13,7 +12,7 @@ class Party(metaclass=PoolMeta):
     @classmethod
     def __register__(cls, module_name):
         super(Party, cls).__register__(module_name)
-        table = backend.TableHandler(cls, module_name)
+        table = cls.__table_handler__(module_name)
         table.column_rename('tradename', 'trade_name')
 
     @classmethod
